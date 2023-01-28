@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: http://localhost:8081/ # ???? ??, http://localhost:8000/api/auth/ ? ???? http://localhost:8081 ? ???
+          predicates:
+            - Path=auth/** # ?? gateway ??? api/auth/**? ???? ?? auth-service? ?????? ??
+        - id: demo-service
+          uri: http://localhost:8082/
+          predicates:
+            - Path=demo/**
+            - CustomAuthFilter
