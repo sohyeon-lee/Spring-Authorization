@@ -12,7 +12,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
+<<<<<<< HEAD
 @MapperScan(basePackages= {"com.example.userservice.mapper"})
+=======
+@MapperScan(basePackages= {"com.example.userservice.mappers"})
+>>>>>>> 2506750201c95b15db76515d886f3c770619dc10
 @EnableTransactionManagement
 public class MybatisConfig {
     @Bean
@@ -20,7 +24,11 @@ public class MybatisConfig {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+<<<<<<< HEAD
         sessionFactory.setMapperLocations(resolver.getResources("classpath:com/example/userservice/mapper/*.xml"));
+=======
+        sessionFactory.setMapperLocations(resolver.getResources("classpath:com/example/userservice/mappers/*.xml"));
+>>>>>>> 2506750201c95b15db76515d886f3c770619dc10
         return sessionFactory.getObject();
     }
 

@@ -1,5 +1,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD
 <mapper namespace="com.example.userservice.mapper.UserMapper">
+=======
+<mapper namespace="com.example.userservice.mappers.UserMapper">
+>>>>>>> 2506750201c95b15db76515d886f3c770619dc10
 </mapper>
